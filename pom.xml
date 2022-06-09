@@ -1,0 +1,107 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.liumulin.cloud</groupId>
+    <artifactId>spring-cloud-liumulin</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+<!--    <name>Spring Cloud Liumulin</name>-->
+    <description>Spring Cloud Liumulin</description>
+    <url>https://www.liumulin.top</url>
+
+    <developers>
+        <developer>
+            <name>Daniel Liu</name>
+            <email>liu1142865396@gmail.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <!-- Project revision -->
+        <revision>1.0.0-SNAPSHOT</revision>
+
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+<!--        <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>-->
+
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
+        <!-- 看看咋放到 bom 里 -->
+        <lombok.version>1.18.20</lombok.version>
+        <mapstruct.version>1.4.1.Final</mapstruct.version>
+    </properties>
+
+    <modules>
+        <module>spring-cloud-liumulin-dependencies</module>
+        <module>spring-cloud-liumulin-pay</module>
+        <module>spring-boot-starter</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.cloud</groupId>-->
+<!--                <artifactId>spring-cloud-alibaba-dependencies</artifactId>-->
+<!--                <version>${spring-cloud-alibaba.version}</version>-->
+<!--                <type>pom</type>-->
+<!--                <scope>import</scope>-->
+<!--            </dependency>-->
+
+            <dependency>
+                <groupId>com.liumulin.cloud</groupId>
+                <artifactId>spring-cloud-liumulin-dependencies</artifactId>
+                <version>${revision}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- maven-surefire-plugin 插件，用于运行单元测试。 -->
+                <!-- 注意，需要使用 3.0.X+，因为要支持 Junit 5 版本 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven-surefire-plugin.version}</version>
+                </plugin>
+                <!-- maven-compiler-plugin 插件，解决 Lombok + MapStruct 组合 -->
+<!--                <plugin>-->
+<!--                    <groupId>org.apache.maven.plugins</groupId>-->
+<!--                    <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                    <version>${maven-compiler-plugin.version}</version>-->
+<!--                    <configuration>-->
+<!--                        <annotationProcessorPaths>-->
+<!--                            <path>-->
+<!--                                <groupId>org.projectlombok</groupId>-->
+<!--                                <artifactId>lombok</artifactId>-->
+<!--                                <version>${lombok.version}</version>-->
+<!--                            </path>-->
+<!--                            <path>-->
+<!--                                <groupId>org.mapstruct</groupId>-->
+<!--                                <artifactId>mapstruct-processor</artifactId>-->
+<!--                                <version>${mapstruct.version}</version>-->
+<!--                            </path>-->
+<!--                        </annotationProcessorPaths>-->
+<!--                    </configuration>-->
+<!--                </plugin>-->
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+    <!-- 使用 aliyun 的 Maven 源来提升下载速度 -->
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>aliyun-maven</id>-->
+<!--            <name>aliyun</name>-->
+<!--            <url>https://maven.aliyun.com/repository/public</url>-->
+<!--        </repository>-->
+<!--    </repositories>-->
+</project>

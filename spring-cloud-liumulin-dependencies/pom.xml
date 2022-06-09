@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+<!--    <parent>-->
+<!--        <artifactId>spring-cloud-liumulin</artifactId>-->
+<!--        <groupId>com.liumulin.cloud</groupId>-->
+<!--        <version>${revision}</version>-->
+<!--    </parent>-->
+
+    <!--继承父 POM，所以只需写 artifactId-->
+    <groupId>com.liumulin.cloud</groupId>
+    <artifactId>spring-cloud-liumulin-dependencies</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+    <!--    <name>Spring Cloud Liumulin Dependencies</name>-->
+    <description>Spring Cloud Liumulin Dependencies</description>
+
+    <!--统一管理 jar 包版本-->
+    <properties>
+        <revision>1.0.0-SNAPSHOT</revision>
+<!--        <maven.compiler.source>11</maven.compiler.source>-->
+<!--        <maven.compiler.target>11</maven.compiler.target>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+
+        <spring-boot.version>2.6.8</spring-boot.version>
+        <!-- Maven Plugin Versions -->
+    </properties>
+
+    <!--子模块继承之后，提供作用：锁定版本 + module 不用写 groupId 和 version-->
+    <dependencyManagement>
+        <dependencies>
+            <!-- 统一依赖管理 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Web 相关 -->
+            <dependency>
+                <groupId>com.liumulin.cloud</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>com.liumulin.cloud</groupId>-->
+<!--                <artifactId>spring-boot-starter-web</artifactId>-->
+<!--                <version>${revision}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-web</artifactId>-->
+<!--                <version>${spring-boot.version}</version>-->
+<!--            </dependency>-->
+        </dependencies>
+    </dependencyManagement>
+</project>
