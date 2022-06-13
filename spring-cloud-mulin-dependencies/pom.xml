@@ -31,6 +31,8 @@
         <!-- Maven Plugin Versions -->
         <mybatis-plus.version>3.4.3</mybatis-plus.version>
         <mybatis-plus-generator.version>3.5.1</mybatis-plus-generator.version>
+
+        <druid.version>1.2.8</druid.version>
     </properties>
 
     <!--子模块继承之后，提供作用：锁定版本 + module 不用写 groupId 和 version-->
@@ -85,6 +87,12 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId>
                 <version>${mybatis-plus-generator.version}</version>
+            </dependency>
+            <!--druid-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
