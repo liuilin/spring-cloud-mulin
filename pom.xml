@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.liumulin.cloud</groupId>
-    <artifactId>spring-cloud-liumulin</artifactId>
+    <artifactId>spring-cloud-mulin</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
 <!--    <name>Spring Cloud Liumulin</name>-->
-    <description>Spring Cloud Liumulin</description>
+    <description>Spring Cloud desc</description>
     <url>https://www.liumulin.top</url>
 
     <developers>
@@ -35,8 +35,8 @@
     </properties>
 
     <modules>
-        <module>spring-cloud-liumulin-dependencies</module>
-        <module>spring-cloud-liumulin-pay</module>
+        <module>spring-cloud-mulin-dependencies</module>
+        <module>spring-cloud-mulin-pay</module>
         <module>spring-boot-starter</module>
     </modules>
 
@@ -53,7 +53,7 @@
 
             <dependency>
                 <groupId>com.liumulin.cloud</groupId>
-                <artifactId>spring-cloud-liumulin-dependencies</artifactId>
+                <artifactId>spring-cloud-mulin-dependencies</artifactId>
                 <version>${revision}</version>
                 <type>pom</type>
                 <scope>import</scope>

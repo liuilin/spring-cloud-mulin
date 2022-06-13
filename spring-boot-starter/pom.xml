@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>spring-cloud-liumulin</artifactId>
+        <artifactId>spring-cloud-mulin</artifactId>
         <groupId>com.liumulin.cloud</groupId>
         <version>${revision}</version>
     </parent>
