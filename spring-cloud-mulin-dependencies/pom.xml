@@ -11,7 +11,7 @@
 <!--    </parent>-->
 
     <!--继承父 POM，所以只需写 artifactId-->
-    <groupId>com.liumulin.cloud</groupId>
+    <groupId>com.liumulin</groupId>
     <artifactId>spring-cloud-mulin-dependencies</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
@@ -26,7 +26,11 @@
 <!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
 
         <spring-boot.version>2.6.8</spring-boot.version>
+
+        <lombok.version>1.18.20</lombok.version>
         <!-- Maven Plugin Versions -->
+        <mybatis-plus.version>3.4.3</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.5.1</mybatis-plus-generator.version>
     </properties>
 
     <!--子模块继承之后，提供作用：锁定版本 + module 不用写 groupId 和 version-->
@@ -43,13 +47,20 @@
 
             <!-- Web 相关 -->
             <dependency>
-                <groupId>com.liumulin.cloud</groupId>
+                <groupId>com.liumulin</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${revision}</version>
             </dependency>
 
+            <!-- Web 相关 -->
 <!--            <dependency>-->
-<!--                <groupId>com.liumulin.cloud</groupId>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-starter-web</artifactId>-->
+<!--                <version>${spring-boot.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.liumulin</groupId>-->
 <!--                <artifactId>spring-boot-starter-web</artifactId>-->
 <!--                <version>${revision}</version>-->
 <!--            </dependency>-->
@@ -58,6 +69,23 @@
 <!--                <artifactId>spring-boot-starter-web</artifactId>-->
 <!--                <version>${spring-boot.version}</version>-->
 <!--            </dependency>-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <!-- mybatis plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

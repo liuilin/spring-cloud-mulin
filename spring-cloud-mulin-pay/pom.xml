@@ -6,7 +6,7 @@
 
     <parent>
         <artifactId>spring-cloud-mulin</artifactId>
-        <groupId>com.liumulin.cloud</groupId>
+        <groupId>com.liumulin</groupId>
         <version>${revision}</version>
     </parent>
 
