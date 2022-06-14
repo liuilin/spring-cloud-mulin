@@ -6,10 +6,14 @@ import com.liumulin.pay.model.vo.PayVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
+import java.util.List;
+
 
 /**
+ * 支付
+ *
  * @author liuqiang
- * @since 2022-06-14
+ * @since 2022-06-15
  */
 @Mapper
 public interface PayConvert {
@@ -17,5 +21,7 @@ public interface PayConvert {
 
     PayDO payDTOtoPayDO(PayDTO payDTO);
 
-    PayVO payDOToPayVO(PayDO payDO);
+    PayVO payDOtoPayVO(PayDO payDO);
+
+    List<PayVO> payDOListToPayVOList(List<PayDO> payDOList);
 }

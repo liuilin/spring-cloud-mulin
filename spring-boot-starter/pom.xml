@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>mulin-common</module>
         <module>spring-boot-starter-web</module>
     </modules>
 

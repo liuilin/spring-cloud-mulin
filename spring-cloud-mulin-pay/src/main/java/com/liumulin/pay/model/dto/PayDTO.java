@@ -18,12 +18,10 @@ import lombok.experimental.Accessors;
  * @since 2022-06-14
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
+@EqualsAndHashCode(callSuper = false)
 public class PayDTO{
     private Long id;
 
     private String serial;
-
-
 }
