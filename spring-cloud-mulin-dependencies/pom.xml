@@ -10,7 +10,6 @@
 <!--        <version>${revision}</version>-->
 <!--    </parent>-->
 
-    <!--继承父 POM，所以只需写 artifactId-->
     <groupId>com.liumulin</groupId>
     <artifactId>spring-cloud-mulin-dependencies</artifactId>
     <version>${revision}</version>
