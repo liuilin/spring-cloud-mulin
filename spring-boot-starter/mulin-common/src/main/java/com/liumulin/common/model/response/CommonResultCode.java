@@ -1,8 +1,8 @@
 package com.liumulin.common.model.response;
 
 public enum CommonResultCode implements ResultCode {
-    SUCCESS(1, "操作成功"),
-    FAIL(0, "操作失败！"),
+    SUCCESS(0, "操作成功"),
+    FAIL(1, "操作失败！"),
     SERVER_ERROR(99999, "抱歉，系统繁忙，请稍后重试！"),
 
     UNAUTHENTICATED(10001, "此操作需要登陆系统！"),

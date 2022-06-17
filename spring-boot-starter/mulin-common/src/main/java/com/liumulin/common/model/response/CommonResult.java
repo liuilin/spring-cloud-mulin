@@ -12,7 +12,7 @@ import java.util.Objects;
  * @author Daniel Liu
  */
 @Data
-public class CommonResult<T> implements Serializable{
+public class CommonResult<T> implements Serializable {
 
     //    public static final int NO_LOGIN = -1;
 //    public static final int SUCCESS = 0;
@@ -21,16 +21,10 @@ public class CommonResult<T> implements Serializable{
 //    public static final int UNKNOWN_EXCEPTION = -99;
 //    private static final long serialVersionUID = 1L;
 
-    private int code;
+    private Integer code;
 
-    /**
-     * 返回的信息(主要出错的时候使用)
-     */
-    private String msg;
+    private String message;
 
-    /**
-     * 返回的数据
-     */
     private T data;
 
     public CommonResult() {
@@ -47,7 +41,7 @@ public class CommonResult<T> implements Serializable{
         CommonResult<T> result = new CommonResult<>();
         result.code = CommonResultCode.SUCCESS.getCode();
         result.data = data;
-        result.msg = "success";
+        result.message = CommonResultCode.SUCCESS.getMsg();
         return result;
     }
 
@@ -55,7 +49,7 @@ public class CommonResult<T> implements Serializable{
         Assert.isTrue(!Objects.equals(CommonResultCode.SUCCESS.getCode(), code), "code 必须是错误码！");
         CommonResult<T> result = new CommonResult<>();
         result.code = code;
-        result.msg = message;
+        result.message = message;
         return result;
     }
 
@@ -69,7 +63,7 @@ public class CommonResult<T> implements Serializable{
      * @return 新的 CommonResult 对象
      */
     public static <T> CommonResult<T> error(CommonResult<?> result) {
-        return error(result.getCode(), result.getMsg());
+        return error(result.getCode(), result.getMessage());
     }
 
     public static <T> CommonResult<T> error(ResultCode code) {
