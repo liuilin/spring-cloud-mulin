@@ -16,7 +16,7 @@ import lombok.Getter;
  * 5、可预知的异常及不可预知的运行时异常最终会采用统一的信息格式（错误代码 + 错误信息）来表示，最终也会随请求响应给客户端。
  */
 @Getter
-public class CustomException extends RuntimeException {
+public class BusinessException extends RuntimeException {
     /**
      * 异常对应的错误类型
      */
@@ -29,13 +29,13 @@ public class CustomException extends RuntimeException {
 //        this.resultCode = CommonResultCode.SERVER_ERROR;
 //    }
 
-    public CustomException(ResultCode resultCode) {
+    public BusinessException(ResultCode resultCode) {
         //异常信息为：错误代码+异常信息
         super("错误代码：" + resultCode.getCode() + "；异常信息：" + resultCode.getMsg());
         this.resultCode = resultCode;
     }
 
-    public CustomException(String message) {
+    public BusinessException(String message) {
         super(message);
         this.resultCode = null;
     }

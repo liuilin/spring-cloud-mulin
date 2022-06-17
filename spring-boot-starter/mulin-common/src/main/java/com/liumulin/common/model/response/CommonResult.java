@@ -9,7 +9,7 @@ import java.util.Objects;
 /**
  * 返回对象包装类(带泛型)
  *
- * @author liuqiang
+ * @author Daniel Liu
  */
 @Data
 public class CommonResult<T> implements Serializable{

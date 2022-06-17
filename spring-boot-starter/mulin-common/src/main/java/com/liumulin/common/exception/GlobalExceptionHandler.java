@@ -22,7 +22,7 @@ import java.nio.file.AccessDeniedException;
 /**
  * 全局异常处理器，将 Exception 翻译成 CommonResult + 对应的异常编号
  *
- * @author 芋道源码
+ * @author Daniel Liu
  */
 @Slf4j
 @AllArgsConstructor
@@ -212,8 +212,8 @@ public class GlobalExceptionHandler {
     /**
      * 处理系统异常，兜底处理所有的一切
      */
-    @ExceptionHandler(value = CustomException.class)
-    public CommonResult<?> cusEx(CustomException ex) {
+    @ExceptionHandler(value = BusinessException.class)
+    public CommonResult<?> cusEx(BusinessException ex) {
         log.error("[defaultExceptionHandler]", ex);
         return CommonResult.error(ex.getResultCode());
         // 插入异常日志

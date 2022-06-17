@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * 支付启动类
  *
- * @author liuqiang
+ * @author Daniel Liu
  * @since 2022-06-14
  */
 @SpringBootApplication

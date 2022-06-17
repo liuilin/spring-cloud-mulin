@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * JSON 工具类
  *
- * @author 芋道源码
+ * @author Daniel Liu
  */
 @UtilityClass
 @Slf4j

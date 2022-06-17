@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * 时间工具类
  *
- * @author 芋道源码
+ * @author Daniel Liu
  */
 public class DateUtils {
 
