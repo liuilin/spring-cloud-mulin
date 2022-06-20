@@ -15,9 +15,7 @@
 
     <modules>
         <module>mulin-common</module>
+        <module>spring-boot-starter-file-upload</module>
         <module>spring-boot-starter-web</module>
     </modules>
-
-
-
 </project>
