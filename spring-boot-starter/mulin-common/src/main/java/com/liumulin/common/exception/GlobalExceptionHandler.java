@@ -106,7 +106,8 @@ public class GlobalExceptionHandler {
     public CommonResult<?> methodArgumentNotValidExceptionExceptionHandler(MethodArgumentNotValidException ex) {
         log.warn("[methodArgumentNotValidExceptionExceptionHandler]", ex);
         FieldError fieldError = ex.getBindingResult().getFieldError();
-        assert fieldError != null; // 断言，避免告警
+        // 断言，避免告警
+        assert fieldError != null;
         return CommonResult.error(CommonResultCode.BAD_REQUEST.getCode(), String.format("请求参数不正确:%s", fieldError.getDefaultMessage()));
     }
 
@@ -117,7 +118,8 @@ public class GlobalExceptionHandler {
     public CommonResult<?> bindExceptionHandler(BindException ex) {
         log.warn("[handleBindException]", ex);
         FieldError fieldError = ex.getFieldError();
-        assert fieldError != null; // 断言，避免告警
+        // 断言，避免告警
+        assert fieldError != null;
         return CommonResult.error(CommonResultCode.BAD_REQUEST.getCode(), String.format("请求参数不正确:%s", fieldError.getDefaultMessage()));
     }
 

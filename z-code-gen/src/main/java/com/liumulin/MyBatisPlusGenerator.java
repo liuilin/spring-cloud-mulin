@@ -22,7 +22,7 @@ public class MyBatisPlusGenerator {
     public static final String USERNAME = "root";
     public static final String PASSWORD = "123456";
     public static final String AUTHOR = "Daniel Liu";
-    public static final String[] TABLES = {"user_info", "xxx"};
+    private static final String[] TABLES = {"user_info", "xxx"};
     private static String projectPath = System.getProperty("user.dir");  // 获取当前项目的工作目录
 
     public static void main(String[] args) {

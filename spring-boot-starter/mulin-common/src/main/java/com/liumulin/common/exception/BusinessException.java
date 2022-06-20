@@ -14,6 +14,7 @@ import lombok.Getter;
  * 4、对于不可预知的异常（运行时异常）由 SpringMVC 统一捕获 Exception 类型的异常。
  * 不可预知异常通常是由于系统出现 bug、或一些不要抗拒的错误（比如网络中断、服务器宕机等），异常类型为 RuntimeException 类型（运行时异常）。
  * 5、可预知的异常及不可预知的运行时异常最终会采用统一的信息格式（错误代码 + 错误信息）来表示，最终也会随请求响应给客户端。
+ * @author Daniel Liu
  */
 @Getter
 public class BusinessException extends RuntimeException {
@@ -31,7 +32,7 @@ public class BusinessException extends RuntimeException {
 
     public BusinessException(ResultCode resultCode) {
         //异常信息为：错误代码+异常信息
-        super("错误代码：" + resultCode.getCode() + "；异常信息：" + resultCode.getMsg());
+        super("错误代码：" + resultCode.getCode() + "；异常信息：" + resultCode.getMessage());
         this.resultCode = resultCode;
     }
 

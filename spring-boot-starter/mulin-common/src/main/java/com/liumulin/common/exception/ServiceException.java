@@ -1,7 +1,7 @@
 package com.liumulin.common.exception;
 
 /**
- * Created by zhoutaoo on 2018/6/2.
+ * @author Daniel Liu
  */
 public class ServiceException extends RuntimeException {
 

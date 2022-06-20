@@ -41,7 +41,7 @@ public class CommonResult<T> implements Serializable {
         CommonResult<T> result = new CommonResult<>();
         result.code = CommonResultCode.SUCCESS.getCode();
         result.data = data;
-        result.message = CommonResultCode.SUCCESS.getMsg();
+        result.message = CommonResultCode.SUCCESS.getMessage();
         return result;
     }
 
@@ -67,6 +67,6 @@ public class CommonResult<T> implements Serializable {
     }
 
     public static <T> CommonResult<T> error(ResultCode code) {
-        return error(code.getCode(), code.getMsg());
+        return error(code.getCode(), code.getMessage());
     }
 }
