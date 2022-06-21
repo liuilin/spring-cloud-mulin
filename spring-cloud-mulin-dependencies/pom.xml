@@ -42,6 +42,9 @@
         <transmittable-thread-local.version>2.12.2</transmittable-thread-local.version>
 
         <commons-lang3.version>3.12.0</commons-lang3.version>
+
+        <!-- 三方云服务相关 -->
+        <minio.version>8.2.2</minio.version>
     </properties>
 
     <!--子模块继承之后，提供作用：锁定版本 + module 不用写 groupId 和 version-->
@@ -143,7 +146,11 @@
                 <artifactId>transmittable-thread-local</artifactId> <!-- 解决 ThreadLocal 父子线程的传值问题 -->
                 <version>${transmittable-thread-local.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${minio.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>

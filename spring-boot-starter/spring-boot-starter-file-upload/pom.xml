@@ -39,5 +39,10 @@
             <artifactId>mulin-common</artifactId>
         </dependency>
 
+        <!-- 三方云服务相关 -->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+        </dependency>
     </dependencies>
 </project>
