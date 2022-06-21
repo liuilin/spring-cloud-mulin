@@ -1,0 +1,10 @@
+oss:
+ uploadMethod: qiniu
+ qiniu:
+   accessKey: VmT9AhpktSYkIM_MNP6WOZgbLhMMt7fekrRy-_DY
+   secretKey: oKqAO1NFD-c0zi7XHrlgSosxzSi1-_4h6pT-dguK
+   bucket: wjmh
+   pathPrefix: mock
+   domain: cdn.liumulin.top
+ aliyun:
+ local:

@@ -2,6 +2,7 @@ package com.liumulin.common.util.string;
 
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.core.util.StrUtil;
+import org.springframework.lang.Nullable;
 
 import java.util.Collection;
 
@@ -10,7 +11,7 @@ import java.util.Collection;
  *
  * @author Daniel Liu
  */
-public class StrUtils {
+public class StringUtils {
 
     public static String maxLength(CharSequence str, int maxLength) {
         return StrUtil.maxLength(str, maxLength - 3); // -3 的原因，是该方法会补充 ... 恰好
@@ -37,4 +38,11 @@ public class StrUtils {
         return false;
     }
 
+    public static boolean hasText(@Nullable String str) {
+        return org.springframework.util.StringUtils.hasText(str);
+    }
+
+    public static boolean isAnyEmpty(CharSequence... css) {
+        return org.apache.commons.lang3.StringUtils.isAnyEmpty(css);
+    }
 }

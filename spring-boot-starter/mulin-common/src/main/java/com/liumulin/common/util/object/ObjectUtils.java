@@ -60,4 +60,7 @@ public class ObjectUtils {
         return Arrays.asList(array).contains(obj);
     }
 
+    public static boolean allNotNull(Object... values) {
+        return org.apache.commons.lang3.ObjectUtils.allNotNull(values);
+    }
 }

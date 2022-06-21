@@ -45,6 +45,8 @@ public enum CommonResultCode implements ResultCode {
      */
     REPEATED_REQUESTS(900, "重复请求，请稍后重试"),
     DEMO_DENY(901, "演示模式，禁止写操作"),
+    CONFIG_NOT_CORRECT(902, "请检查配置是否正确"),
+    STRING_NOT_EMPTY(903, "字符串不能为空"),
 
     UNKNOWN(999, "未知错误"),
     ;
