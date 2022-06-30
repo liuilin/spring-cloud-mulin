@@ -1,4 +1,4 @@
-package com.gmrfid.utils;
+package com.liumulin.common.util;
 
 import java.math.BigDecimal;
 
