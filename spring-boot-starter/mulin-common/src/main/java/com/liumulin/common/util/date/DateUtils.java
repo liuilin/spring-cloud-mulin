@@ -12,6 +12,20 @@ import java.util.Date;
 public class DateUtils {
 
     /**
+     * 获取当天开始时间
+     */
+    public static LocalDateTime getStartOfDay() {
+        return LocalDateTime.of(LocalDate.now(), LocalTime.MIN);
+    }
+
+    /**
+     * 获取当天结束时间
+     */
+    public static LocalDateTime getEndOfDay() {
+        return LocalDateTime.of(LocalDate.now(), LocalTime.MAX);
+    }
+
+    /**
      * 时区 - 默认
      */
     public static final String TIME_ZONE_DEFAULT = "GMT+8";
